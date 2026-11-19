@@ -1,11 +1,113 @@
-<!DOCTYPE html>
-<html lang="en">
+<!doctype html>
+<html lang="ko">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>웹 호스팅</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#f7f5f0">
+  <meta name="description" content="나를 소개하고 작업을 기록하는 개인 웹사이트입니다.">
+  <title>나의 공간 — 개인 웹사이트</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Noto+Sans+KR:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    git pages 입니다.
+  <header class="site-header">
+    <a class="wordmark" href="#home" aria-label="홈으로">MY<span>SPACE</span></a>
+    <button class="menu-toggle" aria-label="메뉴 열기" aria-expanded="false" aria-controls="main-nav">☰</button>
+    <nav id="main-nav" class="main-nav" aria-label="주요 메뉴">
+      <a href="#about">소개</a>
+      <a href="#projects">프로젝트</a>
+      <a href="#contact">연락하기</a>
+    </nav>
+  </header>
+
+  <main>
+    <section class="hero section-wrap" id="home">
+      <div class="hero-copy">
+        <p class="eyebrow"><span class="status-dot"></span> WELCOME TO MY PAGE</p>
+        <h1>안녕하세요,<br>저는 <span class="accent">나만의 길</span>을<br>만들어가는 사람입니다.</h1>
+        <p class="hero-description">관심 있는 것들을 배우고, 작은 아이디어를 꾸준히 현실로 만듭니다. 이곳에 저의 이야기와 작업을 기록합니다.</p>
+        <div class="hero-actions">
+          <a class="button button-dark" href="#projects">작업 둘러보기 <span aria-hidden="true">↗</span></a>
+          <a class="text-link" href="#about">저를 더 알아보기 <span aria-hidden="true">↓</span></a>
+        </div>
+      </div>
+      <div class="hero-art" aria-label="나를 상징하는 장식 이미지" role="img">
+        <div class="art-orbit orbit-one"></div>
+        <div class="art-orbit orbit-two"></div>
+        <div class="art-sun"></div>
+        <div class="art-note note-top">KEEP<br>GROWING</div>
+        <div class="art-note note-bottom">MADE WITH<br>CARE ✳</div>
+        <div class="art-caption">IDEAS INTO<br>REALITY</div>
+      </div>
+      <a class="scroll-cue" href="#about" aria-label="아래로 이동">SCROLL TO EXPLORE <span>↓</span></a>
+    </section>
+
+    <section class="about section-wrap" id="about">
+      <div class="section-heading">
+        <p class="eyebrow">01 — ABOUT ME</p>
+        <h2>조금씩 알아가는<br>나의 이야기<span class="accent">.</span></h2>
+      </div>
+      <div class="about-content">
+        <p class="about-lead">새로운 것을 배우고 직접 만들어보는 일을 좋아합니다.</p>
+        <p class="muted">이 문단을 나의 관심사, 목표, 경험에 맞게 바꿔보세요. 어떤 일을 좋아하는지, 요즘 무엇을 배우고 있는지, 앞으로 어떤 사람이 되고 싶은지 자유롭게 적을 수 있습니다. 내용을 수정하려면 <code>index.html</code>에서 이 문장을 찾아 바꾸면 됩니다.</p>
+        <div class="tag-list" aria-label="관심 분야"><span>배움</span><span>창작</span><span>기록</span><span>도전</span></div>
+      </div>
+    </section>
+
+    <section class="projects section-wrap" id="projects">
+      <div class="projects-heading">
+        <div class="section-heading">
+          <p class="eyebrow">02 — SELECTED WORK</p>
+          <h2>관심을 담은<br>작은 프로젝트<span class="accent">.</span></h2>
+        </div>
+        <p class="muted projects-intro">아래 카드를 복사해 프로젝트를 추가하거나, 제목과 설명을 원하는 내용으로 수정해보세요.</p>
+      </div>
+      <div class="project-grid">
+        <article class="project-card card-peach">
+          <div class="project-meta"><span>PROJECT 01</span><span>2026</span></div>
+          <div class="project-visual visual-one" aria-hidden="true"><span>✳</span><i></i></div>
+          <h3>첫 번째 프로젝트</h3>
+          <p>무엇을 만들었는지, 어떤 점을 배웠는지 간단히 소개해보세요.</p>
+          <a href="#contact" class="project-link" aria-label="첫 번째 프로젝트 자세히 보기">자세히 보기 <span>↗</span></a>
+        </article>
+        <article class="project-card card-lilac">
+          <div class="project-meta"><span>PROJECT 02</span><span>2026</span></div>
+          <div class="project-visual visual-two" aria-hidden="true"><span>✦</span><i></i></div>
+          <h3>두 번째 프로젝트</h3>
+          <p>아직 프로젝트가 없다면 이루고 싶은 목표나 진행 중인 계획을 적어도 좋아요.</p>
+          <a href="#contact" class="project-link" aria-label="두 번째 프로젝트 자세히 보기">자세히 보기 <span>↗</span></a>
+        </article>
+        <article class="project-card card-green">
+          <div class="project-meta"><span>PROJECT 03</span><span>2026</span></div>
+          <div class="project-visual visual-three" aria-hidden="true"><span>↗</span><i></i></div>
+          <h3>세 번째 프로젝트</h3>
+          <p>새로운 작업을 완성할 때마다 이 공간에 하나씩 추가해보세요.</p>
+          <a href="#contact" class="project-link" aria-label="세 번째 프로젝트 자세히 보기">자세히 보기 <span>↗</span></a>
+        </article>
+      </div>
+    </section>
+
+    <section class="contact section-wrap" id="contact">
+      <p class="eyebrow">03 — GET IN TOUCH</p>
+      <h2>함께 이야기 나눠요<span class="accent">.</span></h2>
+      <p class="muted">궁금한 점이나 하고 싶은 말이 있다면 편하게 연락해주세요.</p>
+      <a class="button button-light" href="mailto:hello@example.com">이메일 보내기 <span aria-hidden="true">↗</span></a>
+      <p class="contact-hint">이메일 주소는 <code>index.html</code>에서 바꿀 수 있어요.</p>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <a class="wordmark" href="#home">MY<span>SPACE</span></a>
+    <p>작은 시작이 멋진 이야기가 되도록.</p>
+    <p>© <span id="year"></span> 나의 공간</p>
+  </footer>
+
+  <script src="script.js"></script>
+  <!-- 방문자 통계를 켜려면 GoatCounter 계정을 만든 뒤 아래 주석을 해제하고 YOUR-CODE를 본인의 코드로 바꾸세요.
+       자세한 설정은 README.md를 참고하세요.
+  <script data-goatcounter="https://YOUR-CODE.goatcounter.com/count" async src="https://gc.zgo.at/count.js"></script>
+  -->
 </body>
 </html>
